@@ -15,6 +15,8 @@ Run the Videos using http-server:
 
 Step 1 - Install http-server using npm: <b> npm install --global http-server </b>
 
-Step 2 - Start the http-server : <b> http-server --cors </b>
+Step 2 - 2. Open node command prompt and Run this command : <b> http-server --cors </b>
+
+<b> By default runs, index.html </b>
 
 CORS because we might Consume some API or Files.

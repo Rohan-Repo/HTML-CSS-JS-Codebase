@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Profile Registration Form </title>
+        <style>
+            body{
+                background-color: lightblue;
+                color: teal;
+                font-weight: bold;
+                padding: 10px;
+            }
+            label, input {
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+			input{
+				margin-left: 10px;
+			}
+            button{
+                width: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2> Register for our Website </h2>
+        <form action="#" method="post">
+            <!-- Text Input -->
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+            <br>
+
+            <!-- Text Input -->
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+            <br>
+
+            <!-- Date Input -->
+            <label for="dob"> Date of Birth:</label>
+            <input type="date" id="dob" name="dob" placeholder="Date of Birth" required>
+            <br>
+
+            <!-- Phone Input -->
+            <!-- Set a Format for User-Input  -->
+            <label for="phoneNum"> Phone Number:</label>
+            <input type="tel" id="phoneNum" name="phoneNum" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <br>
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+            <br>
+
+            <!-- UserName Input -->
+            <!-- Length between 5 to 12  -->
+            <label for="userName">UserName:</label>
+            <input type="text" id="userName" name="userName" required maxlength="5" minlength="12" placeholder="Length between 5 to 12">
+            <br>
+
+            <!-- Password Input -->
+            <!-- Length between 8 to 20  -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required maxlength="20" minlength="8" placeholder="Length between 8 to 20">
+            <br>
+
+            <!-- Radio Buttons -->
+            <label>Gender: </label>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="other">Other</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <br>
+
+            <!-- Dropdown Select -->
+			<!-- optgroup for creating grouping of options -->
+            <label for="country">Country/City:</label>
+            <select id="country" name="country">
+			<optgroup label="Country">
+				<option value="canada">Canada</option>
+                <option value="usa">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="australia">Australia</option>
+			</optgroup>
+			<optgroup label="City">
+				<option value="Toronto">Toronto</option>
+				<option value="Vancouver">Vancouver</option>
+				<option value="Calgary">Calgary</option>
+                <option value="New York">New York </option>
+				<option value="Texas">Texas</option>
+				<option value="San Francisco">San Francisco</option>
+                <option value="London">London</option>
+				<option value="Liverpool">Liverpool</option>
+				<option value="Oxford">Oxford</option>
+                <option value="Sydney">Sydney</option>
+				<option value="Melbourne">Melbourne</option>
+				<option value="Perth">Perth</option>
+			</optgroup>
+            </select>
+            <br>
+
+            <!-- Textarea -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="2" cols="25" placeholder="Write your message here"></textarea>
+            <br>
+
+            <!-- File Upload -->
+            <label for="file"> Upload a Photo : </label>
+            <!-- If we dont specify formats it allows all files -->
+            <input type="file" id="file" name="file" >
+            <!-- To get Images specifically -->
+            <!-- <input type="file" id="file" name="file" accept="image/png, image/gif, image/jpg, image/jpeg" > -->
+            <br>
+
+            <!-- Checkbox -->
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribe to our newsletter</label>
+            <br>
+
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Form">
+            <!-- Reset Button -->
+            <input type="reset" value="Clear Contents">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Profile Registration Form </title>
+        <style>
+            body{
+                background-color: lightblue;
+                color: teal;
+                font-weight: bold;
+                padding: 10px;
+            }
+            label, input {
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+			input{
+				margin-left: 10px;
+			}
+            button{
+                width: 20px;
+            }
+        </style>
+    </head>
+    <!-- <body data-server-no-reload> -->
+    <body>
+            
+        <h2> Register for our Website </h2>
+        <form action="#" method="post" id="myForm">
+            
+            <!-- UserName Text Input -->
+            <!-- Length between 5 to 12  -->
+            <label for="userName">Username:</label>
+            <input type="text" id="userName" name="userName" required minLength="5" maxlength="12" placeholder="Length between 5 to 12">
+            <br>
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+            <br>
+
+            <!-- Password Input -->
+            <!-- Length between 8 to 20  -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required maxlength="20" minlength="8" placeholder="Length between 8 to 20">
+            <br>
+
+            <!-- Date Input -->
+            <label for="dob"> Date of Birth:</label>
+            <input type="date" id="dob" name="dob" placeholder="Date of Birth" required>
+            <br>            
+
+            <!-- Radio Buttons -->
+            <label>Gender: </label>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="other">Other</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <br>
+
+            <!-- Dropdown Select -->
+			<!-- optgroup for creating grouping of options -->
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+				<option value="canada">Canada</option>
+                <option value="usa">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="australia">Australia</option>
+            </select>
+            <br>
+
+            <!-- Textarea -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="2" cols="25" placeholder="Write your message here"></textarea>
+            <br>
+
+            <!-- File Upload -->
+            <label for="file"> Upload a Photo : </label>
+            <!-- If we dont specify formats it allows all files -->
+            <input type="file" id="file" name="file" >
+            <!-- To get Images specifically -->
+            <!-- <input type="file" id="file" name="file" accept="image/png, image/gif, image/jpg, image/jpeg" > -->
+            <br>
+
+            <!-- Submit Button -->
+            <!-- <input type="submit" value="Submit Form" onClick="submitForm()"> -->
+            <!-- Normally it would be submit but since we don't want to submit, this is how we do it     -->
+            <input type="button" value="Submit Form" onClick="submitForm()">
+            <!-- Reset Button -->
+            <input type="reset" value="Clear Contents">
+        </form>
+        <script>
+
+            function submitForm() 
+            {
+                alert( ' Form Submitted!' );
+
+                // Separate Form with its elements
+                const form = document.getElementById("myForm");
+                const elements = form.elements;
+
+                // Iterate all elements except button and reset
+                for (let i = 0; i < elements.length; i++) {
+                    const element = elements[i];
+                    if (element.type !== "submit" && element.type !== "reset") {
+                        // Non-Radio button just print but for radio button print only selected button
+                        if ( (element.type != "radio")  || (element.type == "radio" && element.checked == true) )
+                            console.log(element.name + ": " + element.value );
+                    }
+                }
+
+                // After printing all Values Reset the form & Clear all Contents
+                form.reset();
+            }
+        </script>
+    </body>
+</html>

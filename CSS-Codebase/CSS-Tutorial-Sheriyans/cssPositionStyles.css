@@ -1,0 +1,85 @@
+/* 
+    position: absolute; This means this element will be pulled up over the other elements
+    But since that element has pulled up it's space is empty and another element takes its place
+    But from the top only one element which has been pulled up will be visible & it will hide the other elements 
+    Moreover the last element will just be pulled up, the order of the other elements wont change 
+    position: relative;
+*/
+
+/* CSS Boiler-Plate Code Start */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    
+}
+
+/* CSS Boiler-Plate Code End */
+
+h1{
+    text-align: center;
+    color: maroon;
+}
+
+h3{
+    
+}
+
+#container{
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid maroon;
+}
+
+#car1{
+    /* position: absolute; */
+    width: 100px;
+    height: 120px;
+    background-color: red;
+    text-align: center;
+    padding: 30px;
+    color: antiquewhite;
+}
+
+#car2{
+    /* position: absolute; */
+    top: 10%;
+    left: 20%;
+    width: 110px;
+    height: 90px;
+    background-color: green;
+    text-align: center;
+    padding: 30px;
+    color: lightblue;
+}
+
+#car3{
+    /* position: absolute; */
+    width: 120px;
+    height: 150px;
+    background-color: blue;
+    text-align: center;
+    padding: 50px;
+    color: aquamarine;
+}
+
+#parent{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+}
+
+#child{
+    width: 75px;
+    height: 75px;
+    background-color: aquamarine;
+    position: absolute;
+    left: 20%;
+}

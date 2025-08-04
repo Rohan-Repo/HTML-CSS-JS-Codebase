@@ -1,0 +1,17 @@
+console.log( 'Hello, World!' );
+
+alert( 'Welcome to Canada' );
+
+prompt( 'Enter your name : ' );
+
+confirm( 'Do you want to save the file?' );
+
+5 + 3 * 2;
+
+5 <= 3;
+
+Math.round( 3.1416);
+
+Math.round( Math.PI * 2);
+
+Math.round( Math.PI * 2) < Math.PI * Math.PI;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> KeyBoard Events </title>
+</head>
+<body>
+    
+    <p>
+        <h2> Static User Greeting </h2>
+        <label for="name"> Enter Name : </label>
+        <input type="text" placeholder="Enter Name" name="name" id="name" autofocus>
+        <button onclick="greetUserStatic()"> Greet User </button>
+        <b> <p id="nameValue"> </p> </b>
+    </p>
+
+    <p>
+        <h2> Dynamic User Greeting </h2>
+        <label for="name"> Enter Name : </label>
+        <!-- <input type="text" name="name" id="txtName" placeholder="Enter Your Name" autofocus onkeypress="greetUserDynamic()"> -->
+        <input type="text" name="name" id="txtName" placeholder="Enter Your Name" autofocus onkeyup="greetUserDynamic()">
+    </p>
+    <p>
+        <b> Hello, <i id="txtUserGreeting">  </i> </b> <br />
+    </p>
+
+    
+    <script>
+        // Can Use the Same functionality for multiple Event Handlers
+        function greetUserDynamic(){
+            document.getElementById("txtUserGreeting").innerText = document.getElementById("txtName").value;
+        }
+
+        function greetUserStatic() {
+            let name = document.getElementById("name").value;
+            if( name )
+                document.getElementById("nameValue").innerText = 'Hello, ' + name;    
+            else
+            document.getElementById("nameValue").innerText = 'Please Enter your Name';
+        }
+
+        
+    </script>
+</body>
+</html>

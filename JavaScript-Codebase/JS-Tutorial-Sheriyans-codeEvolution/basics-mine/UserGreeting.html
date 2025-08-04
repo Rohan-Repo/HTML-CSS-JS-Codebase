@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Greet User </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Show This during the explanation for JS & Structures -->
+
+    <button onclick="getDateTime()"> GetDateTime </button>
+    <h3 id="dateTime"> </h3>
+    <br />
+    
+    <p>
+        <h4> Static User Greeting </h4>
+        <label for="name"> Enter Name : </label>
+        <input type="text" placeholder="Enter Name" name="name" id="name" autofocus>
+        <button onclick="greetUserStatic()"> Greet User </button>
+        <p id="nameValue"> </p>
+    </p>
+
+    <!-- Show This during the explanation for DOM -->
+
+    <p>
+        <h4> Dynamic User Greeting </h4>
+        <label for="name2"> Enter Name : </label>
+        <input type="text" placeholder="Enter Name" name="name2" id="name2" autofocus onkeyup="greetUserDynamic()">
+        <p id="nameValue2"> </p>
+    </p>
+
+    <br />
+    <button onclick="clearText()"> Clear Content </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Greet User </title>
+    <style>
+        body{
+            background-color: azure;
+            color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Enter Your Name : 
+        <input type="text" name="userName" id="userName" placeholder="Enter User's Name" autofocus>
+        <button onclick="greetMsg()" id="btnGreet"> Greet User </button>
+    </p>
+    
+    <br />
+    
+    <h2 id="userMsg"></h2> 
+
+    <script>
+        function greetMsg(){
+            let userName = document.getElementById('userName').value;
+            // console.log( 'Name: ',  userName );
+
+            if( userName )
+            {
+                let msg = 'Hello, ' + userName + "<br />" + "Today's Date = " + new Date();
+                document.getElementById('userMsg').innerHTML = msg;
+            }
+            else
+                document.getElementById('userMsg').innerHTML = 'Please Enter a Name';
+}
+    </script>
+</body>
+</html>

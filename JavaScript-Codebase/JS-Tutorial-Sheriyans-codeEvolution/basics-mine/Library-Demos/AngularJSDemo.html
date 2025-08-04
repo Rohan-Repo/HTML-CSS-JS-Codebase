@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title> AngularJS Demo </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <h2> Two-Way Data Binding Example </h2>
+
+    Input 1 same model:  <input type="text" placeholder="Enter Name" autofocus ng-model="name" /> 
+    <p> 
+        Input 2 same model:  <input type="text" ng-model="name"> 
+    </p>
+    <p>
+        Hello, {{ name }}
+    </p>
+</body>
+</html>

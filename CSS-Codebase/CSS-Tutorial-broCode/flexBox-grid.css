@@ -1,0 +1,25 @@
+.flexbox-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightblue;
+}
+
+p{
+    background-color: black;
+    font-size: 15px;
+    margin: 20px;
+    padding: 20px;
+    color: springgreen;
+}
+
+.grid-container{
+    background-color: lemonchiffon;
+    display: grid;
+    padding: 20px;
+    margin: 10px;
+    /* First & Second Col Takes 200px & Third column takes available space */
+    grid-template-columns: 200px 200px auto;
+    /* grid-template-columns: 200px 200px auto; */
+    /* grid-template-columns: 200px 200px;
+     */
+}

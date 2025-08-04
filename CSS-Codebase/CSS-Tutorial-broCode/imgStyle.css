@@ -1,0 +1,17 @@
+body{
+    border: 2px solid tomato;
+    display: flow-root;
+}
+.img1{
+    width: 20%;
+    height: auto;
+    float: left;
+    margin-right: 10px;
+}
+
+.img2{
+    width: 20%;
+    height: auto;
+    float: right;
+    margin-left: 10px;
+}

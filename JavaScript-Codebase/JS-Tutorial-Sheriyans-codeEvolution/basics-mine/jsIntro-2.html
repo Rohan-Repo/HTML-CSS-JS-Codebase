@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> JS Intro </title>
+    </head>
+    <body style="background-color: lemonchiffon; color: purple;">
+        <!-- Use JS to add functionality to your application to make it more interactive -->
+
+        <h1 align="center"> JS Intro </h1>
+        
+        <script>
+            
+            // Direct Action statement 
+            alert( 'Open Dev Console! ' );
+
+            console.log( "Sum : " ,  (10 + 20) );
+
+            // Assignment Operator
+
+            // Variable is nothing but a place to store your data
+            // Constant - Value stays the same, no Change
+            // Variable - Value can change, or does change            
+            const city = 'Toronto';
+            const province = 'ON';
+            console.log( 'You Live in ', city, ' , ', province );
+ 
+            // Conditionals
+            console.log( 'Conditionals Example:' );
+
+            let torAirport1 = 'YYZ';
+            let torAirport2 = 'YTZ';
+
+            console.log( '\t torAirport1 == torAirport2 : ', torAirport1 == torAirport2 );
+            console.log( '\t torAirport1 != torAirport2 : ', torAirport1 != torAirport2, '\n\n' );
+
+            console.log( "\t 1 == '1' : ", 1 == '1' );
+            console.log( "\t 1 != '1' : ", 1 != '1' );
+            console.log( "\t 1 === '1' : ", 1 === '1' );
+            console.log( "\t 1 !== '1' : ", 1 !== '1', '\n\n' );
+            
+            let age = [ 18,14,22,10, -100, 0 ];
+
+            for( let i=0; i<age.length; i++ ){
+                if( age[i] >= 18 )
+                    console.log( "\t Yes,", age[i], "is Eligible to Vote!" );
+                else if( age[i] <= 0 )
+                console.log( "\t No", age[i],"you are NOT even born yet!" );
+                else
+                    console.log( "\t No", age[i],"you are NOT Eligible to Vote!" );
+            }
+
+            var i = 0;
+            var sum = 0;
+
+            while( i <= 10 ){
+                sum = sum + i;
+                i++;
+            }    
+
+            console.log( 'End of Loop:', i );
+            console.log( 'Array Sum : ', sum );
+
+            let mixedArray = [ 1, 2.5, true, "Hello" ];
+            console.log( 'Mixed Array:' )
+            for( let i=0; i<mixedArray.length; i++ )
+                console.log( '\t', i, ' - ', mixedArray[i], ' Type: ', typeof(mixedArray[i]) );
+            
+            console.log( '\n Week Array:' )
+            let weekOfTheDay = [ "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN" ];
+
+            console.log( 'forEach in Array' );
+            for( i in weekOfTheDay )
+                console.error( '\t', i );
+            console.log( 'forEach of Array' );
+            for( i of weekOfTheDay )
+                console.info( '\t', i );
+
+            let user = {
+                "name": "John Doe",
+                "country": "Canada",
+                "age": 18,
+                "street": "123 Main St.",
+                "city": "Calgary",
+                "province": "Alberta",
+                "emailAddress" : "JohnDoe@test.com",
+                "phoneNumber" : "(987) 654-3210",
+            }
+
+            console.info( 'User Details:', user );
+            console.log( '\t Name: ', user.name );
+            console.log( '\t Email Details: ', user.emailAddress );
+            console.log( '\t Phone Number: ', user.phoneNumber );
+
+            let currDate = new Date();
+
+            console.info( 'Date Formats:' );
+            console.log( '\t Date-Time EST: ', currDate );
+            console.log( '\t Date-Time locale: ', currDate.toLocaleString() );
+            console.log( '\t Date-Time UTC: ', currDate.toUTCString() );
+
+        </script>
+    </body>
+</html>

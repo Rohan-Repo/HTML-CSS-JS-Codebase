@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> XHR Example </title>
+        <style>
+            .showData{
+                display: none;
+            }
+            body{
+                background-color: black;
+                color: aquamarine;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h2 align="center">User Information</h2>
+
+        <button type="button" onclick="loadData()" id="btn"> Get User Data </button>
+
+        <div class="showData" id="showData">
+            <p>Name: <span id="name"></span></p>
+            <p>Country: <span id="country"></span></p>
+            <p>Age: <span id="age"></span></p>
+            <p>Address:</p>
+            <ul>
+                <li>Street: <span id="street"></span></li>
+                <li>City: <span id="city"></span></li>
+                <li>Province: <span id="province"></span></li>
+            </ul>
+            <p>Contact Details:</p>
+            <ul>
+                <li>Email Address: <span id="email"></span></li>
+                <li>Phone Number: <span id="phone"></span></li>
+            </ul>
+        </div>
+
+        <script>
+            function loadData() {
+              var xhttp = new XMLHttpRequest();
+
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    userTxt = this.responseText;
+                    console.log( userTxt, typeof(userTxt) );
+
+                    userJSON = JSON.parse( userTxt );
+
+                    console.log( userJSON, typeof(userJSON) );
+
+                    document.getElementById("showData").style.display = "block";
+
+                    document.getElementById("name").innerHTML = userJSON.name;
+                    document.getElementById("country").innerHTML = userJSON.country;
+                    document.getElementById("age").innerHTML = userJSON.age;
+                    document.getElementById("street").innerHTML = userJSON.address.street;
+                    document.getElementById("city").innerHTML = userJSON.address.city;
+                    document.getElementById("province").innerHTML = userJSON.address.province;
+                    document.getElementById("email").innerHTML = userJSON.contactDetails.emailAddress;
+                    document.getElementById("phone").innerHTML = userJSON.contactDetails.phoneNumber;
+
+                    document.getElementById("btn").style.display = "none";
+                }
+              };
+
+              xhttp.open("GET", "user.json", true);
+              
+              xhttp.send();
+            }
+        </script>
+    </body>
+</html>

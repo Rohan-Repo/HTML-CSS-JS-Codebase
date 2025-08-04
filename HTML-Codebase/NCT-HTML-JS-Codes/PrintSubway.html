@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Print Subway Stations </title>
+</head>
+<body>
+    <script>
+
+        const stations = [
+            'Finch', 'Union', 'Bloor', 'Bathurst', 'Vaughan', 'Kipling', 'Kennedy'
+        ]
+
+        document.write( '<p> <h2> Array of Subway Stations in Toronto : </h2> </p>' );
+        for (let i=0; i<stations.length; i++ )
+            document.write( '<p> <h3> ' + stations[i] + '</h3> </p>' );
+
+        document.write( '<br />' );
+
+        const airports = [
+            'Toronto Pearson', 'Billy Bishop'
+        ]        
+
+        document.write( '<p> <h2> Array of Airports in Toronto : </h2> </p>' );
+        for (let i=0; i<airports.length; i++ )
+            document.write( '<p> <h3> ' + airports[i] + '</h3> </p>' );
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* 
+    You can write the CSS in 3 Ways :
+        1. Tag Directly like [html, body]
+        2. [#] to target an id 
+        3. [.] to target a class 
+
+    We use % in sizing for Height and Width when we want to Target the Full-Screen (100%) or Half-Screen (50%) or 1/4th of Screen (25%)
+    We use px (pixels) in sizing for Height and Width when we want to Target a fixed-length of the screen (20px, 100px, 960px etc.)
+    
+    margin is used for external spacing and padding is used for internal spacing 
+    margin: This applies to two or more elements all at once 
+    padding: This applies to a single element, think of it as an imaginary border inside the element
+
+    We can give a unique value to get a Uniform Margin Or Padding throughout OR 
+    use the margin-top, margin-right, margin-bottom, margin-left properties as required OR 
+    use the padding-top, padding-right, padding-bottom, padding-left properties as required 
+        
+    margin & padding short-hand : which we write in Clock-wise Direction top, right, bottom, left like 
+        margin : top-MarginValue, right-MarginValue, bottom-MarginValue, left-MarginValue
+        padding : top-paddingValue, right-paddingValue, bottom-paddingValue, left-paddingValue
+        If we write just two Values margin or padding: 10px 20px then 10px will be for top & bottom and 20px for left and right 
+
+    background-image: To add the URL of a image 
+    background-size: cover - This will fit the Image properly on the container
+    background-position: center/top/bottom - To focus on which part of the image
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+}
+
+.container{
+    width: 30%;
+    height: 25%;
+    background-color: black;
+    color: aquamarine;
+    margin: 20px;
+    padding: 20px;
+}
+
+.imgStyle{
+    width: 50%;
+    height: 50%;
+    background-image: url(https://images.unsplash.com/photo-1646140715711-d118585579b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+    background-size: cover;
+    background-position: center;
+}

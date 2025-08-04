@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JQueryUI Demo </title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    
+    $( function() {
+
+        // DatePicker
+        $( "#datepicker" ).datepicker({
+        changeMonth: true,
+        changeYear: true
+        });
+
+        // AutoComplete 
+        var availableTags = [
+            "ActionScript",
+            "SQL",
+            "ASP.NET",
+            "BASIC",
+            "C",
+            "C++",
+            "Clojure",
+            "COBOL",
+            "ColdFusion",
+            "Erlang",
+            "Fortran",
+            "Groovy",
+            "Haskell",
+            "Java",
+            "JavaScript",
+            "Lisp",
+            "Perl",
+            "PHP",
+            "Python",
+            "Ruby",
+            "Scala",
+            "NoSQL"
+        ];
+        $( "#tags" ).autocomplete({
+        source: availableTags
+        });
+
+        $( "button" ).on( "click", function() {
+            $('#datepicker').val('');
+            $('#tags').val('');
+        } );
+
+    } );
+
+
+  </script>
+</head>
+<body style="background-color: bisque; color: maroon;">
+    <h2> JQueryUI Demo </h2>
+
+    <div class="ui-widget">
+        <p>
+            <label for="tags">Tags: </label>
+            <input id="tags" placeholder="Search for Tech">
+        </p>
+        <p>
+            Date: <input type="text" id="datepicker">
+        </p>
+
+        <button onClick="clear()"> Clear Contents </button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JS Object Example </title>
+    <style>
+        body{
+            background-color: black;
+            color: turquoise;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>    
+    <script>
+        let user  =
+            {
+                firstName : "John",
+                lastName : "Doe",
+                age : 25,
+                birthPlaceInfo : {
+                    city : "London",
+                    country : "UK",
+                    dateOfBirth: "1999-01-01"
+                },
+                currentResidenceInfo : {
+                    city : "Toronto",
+                    country : "Canada"                    
+                },
+                isDeveloper : true,
+                isTester : false,
+                contactDetails : {
+                    emailAddress : "JohnDoe@gmail.com",
+                    phoneNumber : "(987) 654-3210"
+                },
+                hobbies : [ 
+                    "Travelling", 
+                    "Cycling", 
+                    "Music"
+                ],
+                degreeInfo : {                    
+                    degreeName: 'Master Of Computer Science',
+                    collegeName: 'Oxford University',
+                    collegeLocation: 'Oxford, UK'
+                },
+                getUserBirthInfo : function () {
+                    return 'I was born in ' + this.birthPlaceInfo.city + ' , ' + this.birthPlaceInfo.country + ' on ' + this.birthPlaceInfo.dateOfBirth; 
+                },
+                getUserCurrentInfo : function () {
+                    return 'I currently live in ' + this.currentResidenceInfo.city + ' , ' + this.currentResidenceInfo.country; 
+                },
+                getUserInfo : function () {
+                    return 'My Name is ' + this.firstName + ' ' + this.lastName + ' and I am ' + this.age + ' years old!';
+                },
+                getUserContactInfo: function () {
+                    return 'My Email ID is ' + this.contactDetails.emailAddress + ' and my phone number is ' + this.contactDetails.phoneNumber;
+                },
+                getUserDegreeInfo: function () {
+                    return 'I hold a ' + this.degreeInfo.degreeName + ' from ' + this.degreeInfo.collegeName + ' in ' + this.degreeInfo.collegeLocation;
+                }
+            }
+
+            document.writeln( '<div align="center">' );
+            document.writeln( '<h2> User-Info : </h2>' );
+            document.writeln( '<h3> ' + user.getUserInfo() + ' </h3>' );
+            document.writeln( '<h3> ' + user.getUserBirthInfo() + ' </h3>' );
+            document.writeln( '<h3> ' + user.getUserCurrentInfo() + ' </h3>' );
+            document.writeln( '<h3> ' + user.getUserContactInfo() + ' </h3>' );
+            document.writeln( '<h3> My hobbies are ' + user.hobbies.join(' , ') + ' </h3>' );
+            document.writeln( '<h3> I am a Developer ' + user.isDeveloper + ' </h3>' );
+            document.writeln( '<h3> I am a Tester ' + user.isTester + ' </h3>' );
+            document.writeln( '<h3> ' + user.getUserDegreeInfo() + ' </h3>' );
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> VAR LET CONST Eg </title>
+</head>
+<body>
+    <h3> Open the Terminal </h3>
+    <script>
+        // Create Variables using var, const and let
+        console.log( '1: ', age )
+        var age = 18;
+        console.log( '2: ', age )
+        /* 
+            Returns undefined as var age = 18 is converted into two steps
+            var age; i.e. varaible declaration - Which goes to the top of the script [Hoisting]
+            age = 18; i.e. varaible initialization
+            So on line 12 - age is valid but has not initialized so we get it as undefined
+            But on line 14 - age is valid and initialized so we get it as 18
+        */
+        
+        // console.log( '3: ', age2 )
+        // let age2 = 18;
+        // console.log( '4: ', age2 )
+
+        // console.log( age3 )
+        // const age3 = 18;
+        // console.log( age3 )
+
+        // Globally scoped
+        if( age == 18 ){
+            age = 25;
+        }
+        console.log( '5: ', age )
+
+        for( var i=0; i<3; i++ ){
+            console.log( '\t', i );
+        }
+        console.log( '6: ', i );
+
+        // Locally scoped
+        for( let j=0; j<3; j++ ){
+            console.log( '\t', j );
+        }
+        console.log( '7: ', j );
+
+    </script>
+</body>
+</html>

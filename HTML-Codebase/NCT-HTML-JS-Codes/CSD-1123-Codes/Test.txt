@@ -1,0 +1,65 @@
+True False
+MCQ
+Multiple Answers
+
+
+In JavaScript, you can declare many variables in one statement by comma ( , ) separating them. 
+1)True
+2) False
+
+Both, single quotes (') and double quotes (") can be used for strings in JavaScript.
+1)True
+2) False
+
+We use the 'x' operator for multiplication and '%' operator for division in JavaScript:
+1)True
+2) False
+
+What is the use of HTML,CSS and JavaScript in Web Development:
+1) HTML for Structure, CSS for Styling and JavaScript for the functionality
+2) CSS for Structure, JavaScript for Styling and HTML for the functionality
+3) JavaScript for Structure, HTML for Styling and CSS for the functionality
+
+What are the allowed operators in JavaScript: (Choose only the correct options)
+1) x for multiplication
+2) * for multiplication
+3) / for division
+4) // for division
+5) ** for Power/Exponential
+
+What are the ways to insert comments into JavaScript? (Choose only the correct options)
+1) // for a Single line comment
+2) #  for a Single line comment
+3) -- for a Single line comment
+4) /* ... */ for a Multi-line comment
+5) <!--  --> for a Multi-line comment
+
+Code:
+
+Write a Code to convert your originally dark themed web-page to light theme web-page with the click of a button {Hint: Use the onclick() method}
+
+Get User's name from the user in a text-box and upon the click of a button show a Message in bold text:
+{Based on the timing of the day}
+Good Morning (Hours < 12)
+Good Afternoon (Hours >=12 & Hours <=16)
+Good Evening (Hours >16 & Hours < 22)
+Good Night (Hours >= 22 ) 
+{Hint: Use the getHours() method of the Date class} 
+{Hint: Use the onclick() method}
+[Entered User-Name]
+
+Declare a Array of Subway Stations (Finch, Union, Bloor, Bathurst, Vaughan, Kipling, Kennedy) and the Airports in Toronto (Toronto Pearson,Billy Bishop)
+and print it onto the Screen using document.write() using appropriate header-text each on a new line.
+
+Take two floating point numbers as Input from the user using prompt(), convert it to number using an appropriate parsing method and print the following options onto the screen using document.write():
+Addition, Subtraction, Multiplication, Division, Remainder and Power/Exponential
+[Use separate function and proper return value for each arithmetic operation]
+
+
+Makeup Exam -
+Take two floating point numbers as Input from the user using prompt(), convert it to number using an appropriate parsing method and print the following options onto the screen using document.write():
+Addition, Subtraction, Multiplication, Division, Remainder and Power/Exponential
+
+Take User's Name and Age using prompt() and print the message with their name and age and finally if they are eligible to vote or not
+
+Take two integer numbers as Input from the user using prompt(), convert it to number using an appropriate parsing method and print if they are an even number or not

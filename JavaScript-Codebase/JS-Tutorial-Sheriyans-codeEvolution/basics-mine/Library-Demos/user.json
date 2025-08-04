@@ -1,0 +1,14 @@
+{
+    "name": "John Doe",
+    "country": "Canada",
+    "age": 18,
+    "address": {
+        "street": "123 Main St.",
+        "city": "Calgary",
+        "province": "Alberta"
+    },
+    "contactDetails" : {
+        "emailAddress" : "JohnDoe@test.com",
+        "phoneNumber" : "(987) 654-3210"
+    }
+}

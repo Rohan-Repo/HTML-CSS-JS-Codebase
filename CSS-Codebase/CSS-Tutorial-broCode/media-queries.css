@@ -1,0 +1,62 @@
+h2{
+    color: darkmagenta;
+    text-align: center;
+}
+
+#onlyForPrint{
+    display: none;
+}
+
+@media screen and (min-width:600px) {
+    p{
+        font-size: 1.25rem;
+        background-color: black;
+        color: aquamarine; 
+    }
+}
+
+@media screen and (min-width:900px) {
+    p{
+        font-size: 1.5rem;
+        background-color: bisque;
+        color: maroon; 
+    }
+}
+
+@media screen and (min-width:1024px) {
+    p{
+        font-size: 1.75rem;
+        background-color: darkred;
+        color: lightblue; 
+    }
+}
+
+@media screen and (min-width:1366px) {
+    p{
+        font-size: 2.0rem;
+        background-color: turquoise;
+        color: darkblue; 
+    }
+}
+
+@media screen and (max-width:599px) {
+    p{
+        font-size: 1rem;
+        background-color: teal;
+        color: springgreen; 
+    }
+}
+
+@media print and (orientation: portrait) {
+    body{
+        color: teal;
+        border: 5px solid darkblue;
+        padding: 10px;
+        margin: 20px;
+    }
+
+    #onlyForPrint{
+        display: grid;
+        text-align: center;
+    }
+}

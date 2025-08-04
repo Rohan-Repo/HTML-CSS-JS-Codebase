@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Greet User </title>
+    <style>
+        body{
+            background-color: azure;
+            color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <b> Enter Your Name : </b> 
+        <input type="text" name="userName" id="userName" placeholder="Enter User's Name" autofocus>
+        <button onclick="greetMsg()" id="btnGreet"> Greet User </button>
+    </p>
+    
+    <br />
+ 
+    <h2 id="userMsg"></h2> 
+    <h2 id="userGreeting"></h2>
+
+    <script>
+        function greetMsg(){
+            let userName = document.getElementById('userName').value;
+
+            let today = new Date();
+            console.log( 'Date : ', today );
+            console.log( 'Hours : ', today.getHours() );
+
+            let hours = today.getHours();
+
+            let msg = '';
+
+            if( hours < 12 )
+                msg = 'Good Morning!';
+            else
+            if( hours <= 18 )
+                msg = 'Good Day!' ;
+            else
+                msg = 'Good Evening!' ;
+
+            document.getElementById('userMsg').innerHTML = msg;
+            document.getElementById('userGreeting').innerHTML = userName;
+}
+    </script>
+</body>
+</html>

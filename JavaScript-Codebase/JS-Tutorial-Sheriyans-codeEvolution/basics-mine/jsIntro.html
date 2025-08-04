@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> JS Intro </title>
+
+    </head>
+    <body style="background-color: lemonchiffon; color: purple;">
+        <!-- Use JS to add functionality to your application to make it more interactive -->
+
+        <h1 align="center"> JS Intro </h1>
+
+        <h2> Days of the week </h2>
+        <ol start="1" id="myList">
+
+        </ol>
+        
+        <br /> 
+
+        <h2>User Information</h2>
+        <p>Name: <span id="name"></span></p>
+        <p>Country: <span id="country"></span></p>
+        <p>Age: <span id="age"></span></p>
+        <p>Address:</p>
+        <ul>
+            <li>Street: <span id="street"></span></li>
+            <li>City: <span id="city"></span></li>
+            <li>Province: <span id="province"></span></li>
+        </ul>
+        <p>Contact Details:</p>
+        <ul>
+            <li>Email Address: <span id="email"></span></li>
+            <li>Phone Number: <span id="phone"></span></li>
+        </ul>
+        
+        <script>
+            
+            // Direct Action statement 
+            alert( 'Open Dev Console! ' );
+            console.log( "Sum : " ,  (10 + 20) );
+
+            // Assignment Operator
+            // Variable is nothing but a place to store your data
+            // Constant - Value stays the same, no Change
+            // Variable - Value can change, or does change            
+            const city = 'Toronto';
+            const province = 'ON';
+            console.log( 'You Live in ', city, ' , ', province );
+ 
+            console.log( 'Conditionals Example:' );
+            
+            let torAirport1 = 'YYZ';
+            let torAirport2 = 'YTZ';
+
+            console.log( '\t torAirport1 == torAirport2 : ', torAirport1 == torAirport2 )
+            console.log( '\t torAirport1 != torAirport2 : ', torAirport1 != torAirport2, '\n\n' )
+
+            console.log( "\t 1 == '1' : ", 1 == '1' )
+            console.log( "\t 1 != '1' : ", 1 != '1' )
+            console.log( "\t 1 === '1' : ", 1 === '1' )
+            console.log( "\t 1 !== '1' : ", 1 !== '1', '\n\n' )
+            
+            let age = [ 18,14,22,10, -100, 0 ];
+
+            for( let i=0; i<age.length; i++ ){
+                if( age[i] >= 18 )
+                    console.log( "\t Yes,", age[i], "is Eligible to Vote!" );
+                else if( age[i] <= 0 )
+                console.log( "\t No", age[i],"you are NOT even born yet!" );
+                else
+                    console.log( "\t No", age[i],"you are NOT Eligible to Vote!" );
+            }
+
+            var i = 0;
+            var sum = 0;
+
+            while( i <= 10 ){
+                sum = sum + i;
+                i++;
+            }    
+
+            console.log( 'End of Loop:', i );
+            console.log( 'Sum : ', sum );
+
+            let mixedArray = [ 1, 2.5, true, "Hello" ];
+            console.log( 'Mixed Array:' )
+            for( let i=0; i<mixedArray.length; i++ )
+                console.log( i, ' - ', mixedArray[i], ' Type: ', typeof(mixedArray[i]) );
+            
+            console.log( '\n Week Array:' )
+            let weekOfTheDay = [ "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN" ];
+
+            console.log( 'forEach in Array' );
+            for( i in weekOfTheDay )
+                console.error( i );
+            console.log( 'forEach of Array' );
+            for( i of weekOfTheDay )
+                console.info( i );
+
+            for( day of weekOfTheDay ){
+                let listItem = document.createElement('li');
+                let dayName = document.createTextNode( day );
+
+                listItem.appendChild( dayName );
+
+                document.getElementById('myList').appendChild(listItem);
+            }
+
+            let user = {
+                "name": "John Doe",
+                "country": "Canada",
+                "age": 18,
+                "address": {
+                    "street": "123 Main St.",
+                    "city": "Calgary",
+                    "province": "Alberta"
+                },
+                "contactDetails" : {
+                    "emailAddress" : "JohnDoe@test.com",
+                    "phoneNumber" : "(987) 654-3210"
+                }
+            }
+
+            console.log( user );
+            console.log( 'Name: ', user.name );
+            console.log( 'Contact Details: ', user.contactDetails );
+            console.log( 'Email Details: ', user.contactDetails.emailAddress );
+            console.log( 'Phone Number: ', user.contactDetails.phoneNumber );
+
+            document.getElementById("name").innerHTML = user.name;
+            document.getElementById("country").innerHTML = user.country;
+            document.getElementById("age").innerHTML = user.age;
+            document.getElementById("street").innerHTML = user.address.street;
+            document.getElementById("city").innerHTML = user.address.city;
+            document.getElementById("province").innerHTML = user.address.province;
+            document.getElementById("email").innerHTML = user.contactDetails.emailAddress;
+            document.getElementById("phone").innerHTML = user.contactDetails.phoneNumber;
+
+            let currDate = new Date();
+
+            console.log( 'Date-Time EST: ', currDate );
+            console.log( 'Date-Time locale: ', currDate.toLocaleString() );
+            console.log( 'Date-Time UTC: ', currDate.toUTCString() );
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> RGB Eg </title>
+</head>
+<body style="background-color: aliceblue;">
+    <div align="center">
+        <h2 style="color: navy;"> Change BG and FG Colors! </h2>
+        <br /> 
+    
+        <button onclick="changeBGColor('ba')" style="background-color: black; color: aquamarine; font-weight: bold;"> Black-Aquamarine </button>
+        <button onclick="changeBGColor('lp')" style="background-color: lemonchiffon; color: purple; font-weight: bold;"> LemonChiffon-Purple </button>
+        <button onclick="changeBGColor('bm')" style="background-color: bisque; color: maroon; font-weight: bold;"> Bisque-Maroon </button>
+        
+        <br /> <br /> <br />
+        <div id="divMsg">
+            <i> <h3 id="txtMsg"> </h3> </i>
+        </div>
+
+        <br /> <br /> <br />
+        <button type="reset" style="background-color: azure; color: darkcyan; font-weight: bold;" onclick="clearTxt()"> Clear the Text </button>
+
+    </div>
+    
+    
+
+    <script>
+        function changeBGColor( col ){
+            if (col == 'ba'){
+                document.getElementById( 'divMsg' ).style.backgroundColor = 'black';
+                document.getElementById( 'divMsg' ).style.color = 'aquamarine';
+                document.getElementById( 'txtMsg' ).textContent = 'Black-Aquamarine Button was clicked!';
+            }
+            else
+            if (col == 'lp'){
+                document.getElementById( 'divMsg' ).style.backgroundColor = 'lemonchiffon';
+                document.getElementById( 'divMsg' ).style.color = 'purple';
+                document.getElementById( 'txtMsg' ).textContent = 'LemonChiffon-Purple Button was clicked!';
+            }
+            else
+            if (col == 'bm'){
+                document.getElementById( 'divMsg' ).style.backgroundColor = 'bisque';
+                document.getElementById( 'divMsg' ).style.color = 'maroon';
+                document.getElementById( 'txtMsg' ).textContent = 'Bisque-Maroon Button was clicked!';
+            }
+        }
+
+        function clearTxt(){
+            document.getElementById( 'txtMsg' ).textContent = '';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <title> Prototype Example </title>
+    <body>
+        <h3> Prototype Example </h3>
+        <script>
+            let mammal = {
+                species: 'unknown',
+                getSpecies: function() {
+                    return this.species;
+                }
+            }
+
+            let dog1 = Object.create( mammal );
+            dog1.species = 'German Shepard';
+            console.log( dog1.getSpecies() );
+
+            let dog2 = Object.create( mammal );
+            dog2.species = 'Tibetian Mastiff';
+            console.log( dog2.getSpecies() );
+
+
+        </script>
+    </body>
+</html>

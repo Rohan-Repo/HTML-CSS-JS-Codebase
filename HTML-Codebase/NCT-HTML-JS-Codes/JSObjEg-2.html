@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JS Form Object Example </title>
+    <style>
+        body{
+                background-color: black;
+                color: springgreen;
+                font-weight: bold;
+                padding: 10px;
+                font-size: 1.5em;
+            }
+            label, input {
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+			input{
+				margin-left: 10px;
+                background-color: azure;
+			}
+            input[type="submit"],input[type="reset"]{
+                width: 100px;
+                margin: 10px;
+                background-color: azure;
+                color: darkblue;
+                font-weight: bold;
+            }
+            p{
+                background-color: yellow;
+                color: darkred;
+                text-align: center;
+                font-weight: bold;
+            }
+            span{
+                color: aquamarine;
+                font-style: italic;
+            }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <form action="#" method="get" onsubmit="return submitForm()">
+                <!-- UserName Text Input -->
+				<!-- Length between 5 to 12  -->
+				<label for="userName">Username: *</label>
+				<input type="text" id="userName" name="userName" placeholder="Enter UserName" required autofocus/>
+				<br>
+
+				<!-- Password Input -->
+				<label for="password"> Password: *</label>
+				<input type="password" id="password" name="password" placeholder="Enter Password" required />
+				<br>
+
+                <!-- Submit Button -->
+				<input type="submit" value="Submit Form">
+				<!-- Reset Button -->
+				<input type="reset" value="Clear Form" />
+
+                <br>
+
+                </div>
+                <p id="errorMsg"></p>
+        </form>
+    </div>    
+    <script>
+
+        function submitForm(){
+            let userName = document.getElementById('userName').value;
+            let password = document.getElementById('password').value;
+            console.log( userName + " " + password );
+            
+            if( userName.toLowerCase() == 'john' && password.toLowerCase() == "nct" )
+                createAndshowData( 0 );
+            else
+            if( userName.toLowerCase() == 'jane' && password.toLowerCase() == "tsom" )
+                createAndshowData( 1 );
+            else
+            {
+                document.getElementById('errorMsg').innerText = 'Incorrect Credentials!';
+                document.getElementById('userName').value = '';
+                document.getElementById('password').value = '';
+
+                return false;
+            }
+
+            return true;
+        }
+        function createAndshowData( pos ){
+            let users  =
+            [
+                {
+                    firstName : "John",
+                    lastName : "Doe",
+                    age : 25,
+                    birthPlaceInfo : {
+                        city : "London",
+                        country : "UK",
+                        dateOfBirth: "1999-01-01"
+                    },
+                    currentResidenceInfo : {
+                        city : "Toronto",
+                        country : "Canada"                    
+                    },
+                    isDeveloper : true,
+                    isTester : false,
+                    contactDetails : {
+                        emailAddress : "John.Doe@yahoo.com",
+                        phoneNumber : "(987) 654-3210"
+                    },
+                    hobbies : [ 
+                        "Travelling", 
+                        "Cycling", 
+                        "Music"
+                    ],
+                    degreeInfo : {                    
+                        degreeName: 'Master Of Computer Science',
+                        collegeName: 'Oxford University',
+                        collegeLocation: 'Oxford, UK'
+                    },
+                    getUserBirthInfo : function () {
+                        return 'I was born in ' + this.birthPlaceInfo.city + ' , ' + this.birthPlaceInfo.country + ' on ' + this.birthPlaceInfo.dateOfBirth; 
+                    },
+                    getUserCurrentInfo : function () {
+                        return 'I currently live in ' + this.currentResidenceInfo.city + ' , ' + this.currentResidenceInfo.country; 
+                    },
+                    getUserInfo : function () {
+                        return 'My Name is ' + this.firstName + ' ' + this.lastName + ' and I am ' + this.age + ' years old!';
+                    },
+                    getUserContactInfo: function () {
+                        return 'My Email ID is ' + this.contactDetails.emailAddress + ' and my phone number is ' + this.contactDetails.phoneNumber;
+                    },
+                    getUserDegreeInfo: function () {
+                        return 'I hold a ' + this.degreeInfo.degreeName + ' from ' + this.degreeInfo.collegeName + ' in ' + this.degreeInfo.collegeLocation;
+                    }
+                },
+                {
+                    firstName : "Jane",
+                    lastName : "Doe",
+                    age : 21,
+                    birthPlaceInfo : {
+                        city : "Barcelona",
+                        country : "Spain",
+                        dateOfBirth: "2003-01-01"
+                    },
+                    currentResidenceInfo : {
+                        city : "Vancouver",
+                        country : "Canada"                    
+                    },
+                    isDeveloper : false,
+                    isTester : true,
+                    contactDetails : {
+                        emailAddress : "Jane.Doe@gmail.com",
+                        phoneNumber : "(123) 456-7890"
+                    },
+                    hobbies : [ 
+                        "Mountain Climbing", 
+                        "Dancing", 
+                        "Reading Books"
+                    ],
+                    degreeInfo : {                    
+                        degreeName: 'Master Of Business Applications',
+                        collegeName: 'Universitat de Barcelona',
+                        collegeLocation: 'Barcelona, Spain'
+                    },
+                    getUserBirthInfo : function () {
+                        return 'I was born in ' + this.birthPlaceInfo.city + ' , ' + this.birthPlaceInfo.country + ' on ' + this.birthPlaceInfo.dateOfBirth; 
+                    },
+                    getUserCurrentInfo : function () {
+                        return 'I currently live in ' + this.currentResidenceInfo.city + ' , ' + this.currentResidenceInfo.country; 
+                    },
+                    getUserInfo : function () {
+                        return 'My Name is ' + this.firstName + ' ' + this.lastName + ' and I am ' + this.age + ' years old!';
+                    },
+                    getUserContactInfo: function () {
+                        return 'My Email ID is ' + this.contactDetails.emailAddress + ' and my phone number is ' + this.contactDetails.phoneNumber;
+                    },
+                    getUserDegreeInfo: function () {
+                        return 'I hold a ' + this.degreeInfo.degreeName + ' from ' + this.degreeInfo.collegeName + ' in ' + this.degreeInfo.collegeLocation;
+                    }
+                }
+            ]
+
+            document.writeln( '<body align="center" style="background-color: black; color: springgreen; font-weight: bold; font-style: italic;">');
+            document.writeln( '<div>' );
+            document.writeln( '<h2> User-Info : </h2>' );
+            document.writeln( '<h3>' + users[pos].getUserInfo() + ' </h3>' );
+            document.writeln( '<h3>' + users[pos].getUserBirthInfo() + ' </h3>' );
+            document.writeln( '<h3>' + users[pos].getUserCurrentInfo() + ' </h3>' );
+            document.writeln( '<h3>' + users[pos].getUserContactInfo() + ' </h3>' );
+            document.writeln( '<h3> My hobbies are ' + users[pos].hobbies.join(' , ') + ' </h3>' );
+            document.writeln( '<h3> I am a Developer ' + users[pos].isDeveloper + ' </h3>' );
+            document.writeln( '<h3> I am a Tester ' + users[pos].isTester + ' </h3>' );
+            document.writeln( '<h3>' + users[pos].getUserDegreeInfo() + ' </h3>' );
+            document.writeln( '</div> </body>' );
+        }
+        
+    </script>
+</body>
+</html>

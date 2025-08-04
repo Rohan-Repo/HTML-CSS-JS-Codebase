@@ -1,0 +1,61 @@
+<html>
+
+    <head> 
+        <title> CSS Tutorial - External CSS  </title>
+        <!-- This is an External StyleSheet linked to our HTML Page -->
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <!-- As the css file is in d same folder we wrote directly   -->
+        <style>
+                /* Don't need separate style tag our external CSS File will handle the Styles */
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="header">
+                <h1 style="text-decoration: underline"> CSS Tutorial #1 </h1> 
+                <!-- Here we defined the CSS inline  -->
+            </div>
+
+            <div id="content">
+                <div id="nav">
+                    <h3> Navigation </h3>
+                    <ul>
+                        <li> <a href="#" class="selected"> Home </a>  </li>
+                        <li> About Us </li>
+                        <li> Contact </li>
+                    </ul>
+                </div>
+                
+                <div id="main">
+                    <b> English Words : </b>
+                     <ul type="i">
+                        <li> Hello </li>
+                        <li> Good Morning </li>
+                        <li> GoodBye </li>
+                    </ul>
+                    <b> German Words : </b>
+                     <ul type="i">
+                        <li> Hallo </li>
+                        <li> Guten Morgen </li>
+                        <li> Auf Wiedersehen </li>
+                    </ul>
+                    <b> Spanish Words : </b>
+                     <ul type="i">
+                        <li> Hola </li>
+                        <li> Buenos días </li>
+                        <li> Adiós </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="footer">
+                Copyright <b> &copy; </b> Rohan Deshpande 
+            </div>
+
+        </div>    
+    </body>
+
+</html>

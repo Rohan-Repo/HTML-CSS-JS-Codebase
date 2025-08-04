@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> BootStrap Demo </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-color: lightgray; color: purple;">
+        <!-- Use JS to add functionality to your application to make it more interactive -->
+
+        <h1 align="center"> Bootstrap Demo </h1>
+        
+        <div class="container">
+            
+            <h3> User Details : </h3>
+            
+            <table class="table table-hover">
+                <tr>
+                    <th class="table-primary" > Name </th>
+                    <th class="table-secondary" > Country </th>
+                    <th class="table-success"> Age </th>
+                    <th class="table-danger" > Address </th>
+                    <th class="table-warning"> City </th>
+                    <th class="table-dark" > Province </th>
+                    <th class="table-info" > Email-Address </th>
+                    <th class="table-light"> PhoneNumber </th>
+                </tr>
+                  
+                <tr>
+                    <td class="table-primary" id="name"> </td>
+                    <td class="table-secondary" id="country"> </td>
+                    <td class="table-success" id="age"> </td>
+                    <td class="table-danger" id="street"> </td>
+                    <td class="table-warning" id="city"> </td>
+                    <td class="table-dark" id="province"> </td>
+                    <td class="table-info" id="email"> </td>
+                    <td class="table-light" id="phone"> </td>
+                </tr>
+            </table>
+
+            <br /> <br />
+            
+            <h3>Button Styles Filled : </h3>
+            <button type="button" class="btn btn-dark"> Dark </button>
+            <button type="button" class="btn btn-secondary">Default</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-link">Link</button>     
+            <br /> <br />
+            <h3>Button Styles Hollow : </h3>
+            <button type="button" class="btn">Primary</button>
+            <button type="button" class="btn btn-outline-secondary">Secondary</button>
+            <button type="button" class="btn btn-outline-success">Success</button>
+            <button type="button" class="btn btn-outline-danger">Danger</button>
+            <button type="button" class="btn btn-outline-warning">Warning</button>
+            <button type="button" class="btn btn-outline-info">Info</button>
+            <button type="button" class="btn btn-outline-light">Light</button>
+            <button type="button" class="btn btn-outline-dark">Dark</button>
+
+            <br /> <br /> <br /> <br />
+            
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        
+        
+        <script>
+
+            let user = {
+                "name": "John Doe",
+                "country": "Canada",
+                "age": 18,
+                "street": "123 Main St.",
+                "city": "Calgary",
+                "province": "Alberta",
+                "emailAddress" : "JohnDoe@test.com",
+                "phoneNumber" : "(987) 654-3210",
+            }
+
+            document.getElementById("name").innerHTML = user.name;
+            document.getElementById("country").innerHTML = user.country;
+            document.getElementById("age").innerHTML = user.age;
+            document.getElementById("street").innerHTML = user.street;
+            document.getElementById("city").innerHTML = user.city;
+            document.getElementById("province").innerHTML = user.province;
+            document.getElementById("email").innerHTML = user.emailAddress;
+            document.getElementById("phone").innerHTML = user.phoneNumber;
+
+            console.info( 'User Details:', user );
+            console.log( 'Name: ', user.name );
+            console.log( 'Email Details: ', user.emailAddress );
+            console.log( 'Phone Number: ', user.phoneNumber );
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+/*	- HTML is used to define the structure & content of a webpage
+    - CSS is used to give styles to that structure 
+    - '#' stands for ID and '.' stands for Class 
+*/
+
+#header{
+    background-color: #306d75;
+    color: #a8e4b1;
+    text-align: center;
+}
+/* when we want to target a tag just write it normally no # or . */
+/* when we want to remove links for all the anchors in the App */
+a{
+    text-decoration: none;
+    color: #30729c;
+}
+body{
+    background-color : azure;
+/* bg-color: #eeeeee when all 6 are the same we can just write #eee & it works fine  */
+    font-family: Arial, Helvetica, sans-serif /* Set the font of entire Body tag */ 
+}
+#container{
+    border: 20px thick #bbeeee;
+    width: 800px;
+    /* to center the divs Horizontally not vertically we need to set the margin  */
+    margin-left: auto;
+    margin-right: auto;
+}
+#content{
+    /* padding: 10px 10px 10px 10px  so instead write : */
+    padding: 10px;
+}
+/* divs go on the new line to get them side by side we use float  */
+#nav{
+    width: 180px;
+    float: left;
+}
+#main{
+    width: 600px;
+    float: right;
+}
+/* But now the footer is going wrong so we need to be clear of both floating elements */
+#footer{
+    clear: both;
+    padding: 10px;
+    background-color: #999;
+    color: white;
+    text-align: right;
+}
+/* If we need to have the selected class for Nav element & not other */ 
+#nav .selected{
+    font-weight: bold;
+}
+#nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+/* If we need to give the same style to multiple elements we could do */
+h1, h2, h3 {
+    margin: 0;
+}

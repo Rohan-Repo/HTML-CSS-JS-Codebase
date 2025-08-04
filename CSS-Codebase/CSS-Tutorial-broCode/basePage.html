@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- This is an internal CSS Style -->
+        <style>
+            /* This Style will apply to the Entire Tag viz. body and p tag */
+            body {
+                font-size: large;
+                color: aquamarine;
+            }
+            p {
+                font-family: 'Comic Sans MS';
+            }
+
+            .box{
+                border: 5px solid aquamarine;
+                font-size: 3em;
+                width: 300px;
+                height: 300px;
+                padding: 10px;
+                margin: 10px auto;
+            }
+
+            #box1{
+                background-color: red;
+                margin: 10px;
+            }
+
+            #box2{
+                background-color: green;
+                margin: 10px;
+            }
+            #box3{
+                background-color: blue;
+                margin: 10px;
+            }
+            #box4{
+                background-color: brown;
+                margin: 10px;
+            }
+        </style>
+        <title> CSS Tut </title>
+    </head>
+<!-- 
+    CSS can be applied in 3 Ways:
+    Inline -    Inside a tag as a style attribute like "<div style="text-align: center;">" 
+    Internal -  Inside a Dedicated <style></style> Tag in the Header Section
+    External -  A Separate .css file included using the Link Tag like :
+                <link rel="stylesheet" type="text/css" href="styles.css" /> OR
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+                Recomended Option - This works best for Large Enterprise Solutions or Bigger Websites bootstrap
+-->
+
+    <!-- 
+        CSS Colors can be Set using 3 ways:
+        1. Actual Color by Name Eg. background-color: black;
+        2. rgb Values Groups of 3 (RED, GREEN, BLUE) Eg. background-color: rgb(255,255,255);
+        3. Hexadecimal Value starting with a # and 6 digits like background-color: #003087;
+        4. Hue-Saturation-Lightness Values : hsl( hue-number, saturation-percentage, lightness-percentage) Eg. hsl(147, 50%, 47%)
+        5. Hue-Saturation-Lightness-Alpha Values : hsla( hue-number, saturation-percentage, lightness-percentage, alpha between 0 & 1) 
+                                                    Eg. hsla(9, 100%, 64%, 0.6)
+
+        Margins are space around the elements
+        margin auto pushes that element to the center and it stays at the center irrespective of the screen-size
+
+        display: flow-root; Makes sure that the CHild element doesnt overflow into the web-page
+    -->
+        <!-- This is an inline CSS Style -->
+    <body style="background-color: black">
+        <h3> CSS Tutorial </h3>
+        <p>
+            <b> HTML(Structure) </b> is used to define the structure & content of a webpage Eg. Skeleton or Frame of our House
+        </p>
+        <p>
+            <b> CSS(Style) </b> is used to give styles or presentation to that structure Eg. Color, Decoration or Lighting in our House
+        </p>
+        <p>
+            <b> JS(Functionality) </b> is used to give functionality to that Structure Eg. Gives functionality like Plumbing, Electricity, Heating
+        </p>
+
+        
+        <div class="box">
+            <div id="box1"> BOX 1 </div>
+            <div id="box2"> BOX 2 </div>
+            <div id="box3"> BOX 3 </div>
+            <div id="box4"> BOX 4 </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+button{
+    background-color: antiquewhite; 
+    color: maroon; 
+    font-weight: bold;
+    margin: 10px;
+}
+
+p{
+    font-weight: bold;
+    color: navy;
+}
+
+body{
+    background-color: lightcyan;
+    color: teal;
+}
+
+#light{
+    background-color: lightcyan;
+    color: teal;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+#dark{
+    background-color: black;
+    color: springgreen;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+#default{
+    background-color: lemonchiffon;
+    color: purple;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
